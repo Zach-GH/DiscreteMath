@@ -1,0 +1,388 @@
+\section*{Problem 1}
+\subsection*{Part 1}
+{\bf Indicate whether the argument is valid or invalid. For valid arguments, prove that the argument is valid using a truth table. For invalid arguments, give truth values for the variables showing that the argument is not valid.}\\
+ \begin{enumerate}
+
+\item \[
+\begin{array}{||c||}
+\hline \hline
+(p \land q) \to r\\
+\\
+\therefore (p \lor q) \to r\\
+\hline \hline
+\end{array}
+\]\\\\
+ %Enter your answer below this comment line.\begin{center}
+The argument is valid due to the top line of the truth table which indicates that everything is true and that the argument
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c|c| } 
+\hline
+p & q & r & p \land q & (p \land q) \to r & \therefore (p \lor q) \to r \\
+T & T & T & T & T & T \\
+T & T & F & T & F & F \\
+T & F & T & F & T & T \\
+T & F & F & F & T & F \\
+F & T & T & F & T & T \\
+F & T & F & F & T & F \\
+F & F & T & F & T & T \\
+F & F & F & F & T & T \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Part 2}
+{\bf Converse and inverse errors are typical forms of invalid arguments. Prove that each argument is invalid by giving truth values for the variables showing that the argument is invalid. You may find it easier to find the truth values by constructing a truth table.}\\
+ \begin{enumerate}[label=(\alph*)]
+\item Converse error
+\[
+\begin{array}{||c||}
+\hline \hline
+p \to q\\
+q\\
+\\
+\therefore p\\
+\hline \hline
+\end{array}
+\]\\\\
+%Enter your answer below this comment line.
+\\
+\\
+\\
+\\
+Converse of a statement is: \\
+p \to q \\
+is \\
+q \to p \\
+
+IF it is a dog THEN it is a mammal \\
+p \to q (True) \\
+
+IF it is a mammal THEN it is a dog \\
+q \to p (False) \\
+ \\\\
+
+\item Inverse error
+\[
+\begin{array}{||c||}
+\hline \hline
+p \to q\\
+\neg p\\
+\\
+\therefore \neg q\\
+\hline \hline
+\end{array}
+\]\\\\
+%Enter your answer below this comment line.
+p \to q \equiv \neg q \to \neg p \ (contrapositive) \\
+\neg p \to \neg q \ (converse \ of \ contrapositive) \\
+inverse \equiv converse \\
+
+IF dog THEN mammal \\
+p \to q \ True \\
+
+IF not dog THEN not mammal \\
+\neg p \to \neg q \ False \\
+
+\\\\
+\end{enumerate}
+
+\subsection*{Part 3}
+{\bf Which of the following arguments are invalid and which are valid? Prove your answer by replacing each proposition with a variable to obtain the form of the argument. Then prove that the form is valid or invalid.}\\
+ \begin{enumerate}[label=(\alph*)]
+  \item \[
+\begin{array}{||c||}
+\hline \hline
+\text{The patient has high blood pressure or diabetes or both.}\\
+\text {The patient has diabetes or high cholesterol or both.}\\
+\\
+\therefore \text {The patient has high blood pressure or high cholesterol.
+}\\
+\hline \hline
+\end{array}
+\]\\\\\
+%Enter your answer below this comment line.
+p \lor q \lor (p \lor q) \\
+p \lor r \lor (q \lor r) \\
+\therefore q \lor r \\
+
+let p be the patient has high blood pressure \\
+
+let q be the patient has diabetes \\
+
+let r be the patient has high cholesterol \\
+
+We can see in the truth table below, the first row shows that this argument is valid. \\
+
+In addition, looking at the form of the argument, we can assess that logically this is correct due to the combination of variables and the statistical likelihood that the patient can have high blood pressure, or high cholesterol in multiple instances.
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c| } 
+\hline
+p & q & r & p \lor q & p \land q & p \lor q \lor (p \land q) & q \lor r & q \land r & q \lor r \lor (q \land r) & \therefore q \lor r \\
+T & T & T & T & T & T & T & T & T & T\\
+T & T & F & T & T & T & T & F & T & T \\
+T & F & T & T & F & T & T & F & T & T \\
+T & F & F & T & F & T & F & F & F & F \\
+F & T & T & T & F & T & T & T & T & T \\
+F & T & F & T & F & T & T & F & T & T \\
+F & F & T & F & F & F & T & F & T & T \\
+F & F & F & F & F & F & F & F & F & F \\
+\hline
+\end{tabular}
+\end{center}
+\\\\\
+
+ 
+    \end{enumerate}
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 2}
+\subsection*{Part 1}
+
+ Which of the following arguments are valid? Explain your reasoning.\\
+ \begin{enumerate}[label=(\alph*)]
+\item I have a student in my class who is getting an $A$. Therefore, John, a student in my class, is getting an $A$. \\\\
+
+%Enter your answer below this comment line.
+S(x) = got an A \\
+
+This argument is valid due to the form of the argument which is known as existential instantiation. \\
+
+\exists x \ S(x) \ some \ student \ in \ my \ class \ is \ getting \ an \ A \\
+
+\therefore John \ is \ a \ student \ in \ my \ class \ \land \ S(John) \\
+
+\\\\
+\item Every Girl Scout who sells at least 30 boxes of cookies will get a prize. Suzy, a Girl Scout, got a prize. Therefore, Suzy sold at least 30 boxes of cookies.\\\\
+%Enter your answer below this comment line.
+This argument is valid due to the form of the argument which is existential generalization.\\ 
+
+S(x) = x sold 30 boxes \\
+
+M(x) = x got a prize \\
+
+\forall x (S(x) \to M(x))  \\ 
+
+Suzy a girlscout  \\
+
+M(suzy) \\
+
+\therefore S(suzy)
+
+\\\\
+ \end{enumerate}
+
+ \subsection*{Part 2}
+Determine whether each argument is valid. If the argument is valid, give a proof using the laws of logic. If the argument is invalid, give values for the predicates $P$ and $Q$ over the domain ${a,\; b}$ that demonstrate the argument is invalid.\\
+ \begin{enumerate}[label=(\alph*)]
+\item \[
+\begin{array}{||c||}
+\hline \hline
+\exists x\, (P(x)\; \land \;Q(x) )\\
+\\
+\therefore \exists x\, Q(x)\; \land\; \exists x \,P(x) \\
+\hline \hline
+\end{array}
+\]\\\\
+ %Enter your answer here.
+ This is a non equivalence. Although the hypothesis are true, the conclusion is false. In the case that P(x) is prime and Q(x) is a multiple of 4, there will never be any instance in which any number is both prime and a multiple of 4.
+ \\\\
+
+
+\item \[
+\begin{array}{||c||}
+\hline \hline
+\forall x\, (P(x)\; \lor \;Q(x) )\\
+\\
+\therefore \forall x\, Q(x)\; \lor \; \forall x\, P(x) \\
+\hline \hline
+\end{array}
+\]\\\\
+ %Enter your answer here.
+ This is a non equivalence. In this case, the hypothesis is not true, and the conclusion is true. To give an example, in the case that again, P(x) is prime, and Q(x) is a multiple of 4. There will never be any instance of expression in which all numbers are either a multiple of 4 or prime. Though, as I said the conclusion is true, it is definitely possible for all numbers to either be a multiple of 4, or for them to be prime, in a segregated instance.
+ \\\\
+ \end{enumerate}
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+
+\section*{Problem 3}
+
+Prove the following using a direct proof. Your proof should be expressed in complete English sentences.
+\\\\
+PROOF: \\
+
+If $a$, $b$, and $c$ are integers such that $b$ is a multiple of $a^3$ and $c$ is a multiple of $b^2$, then $c$ is a multiple of $a^6$.
+\\\\
+%Enter your answer below this comment line.
+if a * a * a Divides B and are integers, we can imagine that a = 3. \\
+
+3 * 3 * 3 = 27 therefore B = 27 \\
+
+Since B = 27, that means that B * B which divides C is = to 729 \\
+
+Before we can come to the conclusion that C = 729 we have to compute a * a * a * a * a * a \\
+
+Since a = 3, doing the math we see that 3 * 3 * 3 * 3 * 3 * 3 = 729. \\
+
+Since this is true, that must mean that C is equal to 729. \\
+
+\\\\
+
+ \newpage
+%--------------------------------------------------------------------------------------------------
+\section*{Problem 4}
+Prove the following using a direct proof:
+\\
+
+PROOF: \\
+
+The sum of the squares of 4 consecutive integers is an even integer. \\
+
+If the 4 consecutive integers are represented by 5, 6, 7, and 8. \\
+
+The squares of those integers are equal to 25, 36, 49, and 64. \\
+
+Since we are testing to see if the sum of these integers squared is an even number. \\
+
+We add the multiples up to equal 174 which is in fact an even number.
+
+
+%Enter your answer below this comment line.
+\\\\
+
+
+ \newpage
+%--------------------------------------------------------------------------------------------------
+\section*{Problem 5}
+
+Prove the following using a proof by contrapositive:
+\\\\
+Let $x$ be a rational number. Prove that if $xy$ is irrational, then y is irrational.\\\\
+
+Assume \neg XY \ is \ irrational \ and \ X \ is \ rational \ we \ will \ prove \ \neg \ Y \ is \ irrational \\
+
+PROOF: \\
+
+Let x and y be two real numbers such that XY is rational and x is rational. We shall prove that Y is rational. \\
+
+If x = 1/2 and y = 2/5 That would mean that XY =  1/2 * 2/5. If we look closer at this, we can see that XY = 2/10. \\
+
+Reducing this gives us the rational number 1/5 meaning that this theorem is true.
+
+
+
+
+
+%Enter your answer below this comment line.
+\\\\
+
+
+
+
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 6}
+Prove the following using a proof by contradiction:
+\\\\
+
+
+The average of four real numbers is greater than or equal to at least one of the numbers. \\
+
+The average of four real numbers is not greater than or equal to at least one of the numbers. \\
+
+Suppose there is a subset of four real numbers where the average is not greater than or equal to one of the numbers. \\
+
+This contradicts the assumption that the subset of numbers are real numbers, as there is no instance in which it is not true. 
+
+%Enter your answer below this comment line.
+\\\\
+
+
+
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 7}
+
+Let $\displaystyle q = \frac{a}{b}$ and $\displaystyle r = \frac{c}{d}$ be two rational numbers written in lowest terms. Let $s = q + r$ and $\displaystyle s = \frac{e}{f}$ be written in lowest terms. Assume that $s$ is not $0$.\\
+
+ Prove or disprove the following two statements.
+\\\\
+a.  If $b$ and $d$ are odd, then $f$ is odd.
+\\\\
+b. If $b$ and $d$ are even, then $f$ is even.
+\\\\
+%Enter your answer below this comment line.
+
+
+
+\\\\
+
+
+\newpage
+
+\section*{Problem 8}
+{\bf Define $P(n)$ to be the assertion that:}\\
+\[\displaystyle \sum_{j=1}^{n}\, j^2 \;=\;\frac{n(n+1)(2n+1)}{6}\]\\\\
+\begin{enumerate}[label=(\alph*)]
+  \item Verify that $P(3)$ is true.\\\\
+   %Enter your answer here.
+   We plug 3 in for N into the summation which is = to 1 + 2 + 3 which is 6. \\
+We plug in 3 for N on the right side, and we get 84 divided by 6 which is equal to 14. \\
+This means that P(3) cannot be true, as 1 to the second power is = to 1. and 1 is not equal to 14.
+   \\\\
+  \item Express $P(k)$.\\\\
+   %Enter your answer here.
+To express P(k) we replace all of the letter n with k. \\
+
+\[\displaystyle \sum_{j=1}^{k}\, j^2 \;=\;\frac{k(k+1)(2k+1)}{6}\]\\\\
+   \\\\
+  \item Express $P(k+1)$.\\\\
+   %Enter your answer here.
+To express P(k+1) we replace all of n with k + 1 \\
+\[\displaystyle \sum_{j=1}^{k + 1}\, j^2 \;=\;\frac{k + 1((k + 1) +1)(2(k + 1) +1)}{6}\]\\\\
+   \\\\
+   \item In an inductive proof that for every positive integer $n$,
+   \[\displaystyle \sum_{j=1}^{n}\, j^2 \;=\;\frac{n(n+1)(2n+1)}{6}\]
+   what must be proven in the base case?\\\\
+    %Enter your answer here.
+For the base case, we need to establish that the first value is true in the sequence. \\
+
+In the case that n is any real number of days, and we have 3 wishes on the first. \\
+
+We are able to make all 3 wishes on the first day, which means that N holds true \\
+
+
+    \\\\
+    \item In an inductive proof that for every positive integer $n$,
+   \[\displaystyle \sum_{j=1}^{n}\, j^2 \;=\;\frac{n(n+1)(2n+1)}{6}\]
+   what must be proven in the inductive step?\\\\
+   %Enter your answer here.
+What needs to be proven in the inductive step is that for every integer of n we can also prove the same for n + 1 \\
+In this case if we use 2 wishes on day one, and then the next day use the third to wish for three more wishes then we can prove for n + 1 as well which holds true.
+   \\\\
+   \item What would be the inductive hypothesis in the inductive step from your previous answer?\\\\
+    %Enter your answer here.
+    The supposition that n implies n+1 of the inductive step is the inductive hypothesis.
+    \\\\
+   \item Prove by induction that for any positive integer n,
+   \[\displaystyle \sum_{j=1}^{n}\, j^2 \;=\;\frac{n(n+1)(2n+1)}{6}\] \\\\
+    %Enter your answer here.
+Theorem: For every positive integer n \\
+
+Proof: By induction on n \\
+
+Base Case: n = 1 \\
+
+When n = 1 on the left side of the equation \\
+\[\displaystyle \sum_{j=1}^{1}\, j^2 J = 1\] 
+When n = 1 on the right side of the equation \\
+\[\displaystyle \;\frac{1(1+1)(2(1)+1)}{6}\]
+This equates to 6 / 6 which = 1 \\
+
+
+\end{enumerate}
+
+\end{document}
