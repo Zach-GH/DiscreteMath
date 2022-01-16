@@ -1,0 +1,303 @@
+\section*{Problem 1}
+ \noindent
+ This question has 2 parts.
+ \subsection*{Part 1:}
+ Suppose that $F$ and $X$ are events from a common sample space with $P(F) \neq 0$ and $P(X) \neq 0$.
+ \\
+ \begin{enumerate}[label=(\alph*)]
+     \item Prove that $P(X) = P(X|F)P(F) + P(X|\bar{F})P(\bar{F})$. Hint: Explain why $P(X|F)P(F) = P(X \cap F)$ is another way of writing the definition of conditional probability, and then use that with the logic from the proof of Theorem 4.1.1.
+     \\\\
+     %Enter your answer below this comment line.  
+     $P(X|F)P(F) = P(X \cap F)$ Reverse engineering I think is the best way in order to prove that $P(X|F)P(F) = P(X \cap F)$ is an expression of conditional probability. To start, what exactly are we talking about when we use $P(X|F)$ in this instance? To give an example, let's say that two dice are thrown. B is the event that the first die is even, and E is the event in which both dice are even. In this instance $P(E|B)$ is the probability of event E given B. In order to compute the value for this instance, we have to find $E \cap B$ and B individually. There are 9 instances in which $E \cap B$ and there are 18 instances for just B. In other words, $P(E|B) = |E \cap B|/|B|$ which is 9/18 which equals 1/2. Knowing this, if we were to substitute the values and probability into the initial problem in question, we would get 1/2 * 18 = 9. Which is a direct proof that $P(X|F)P(F) = P(X \cap F)$ is true. Now onto $P(X) = P(X|F)P(F) + P(X|\bar{F})P(\bar{F})$. 
+     \\
+     
+     $P(X) = P(X|F)P(F) + P(X|\bar{F})P(\bar{F})$ For this instance of an equation, we have seen an example of the logic above, but I would like to use a different reference of equation. Now, let's start again by reverse engineering the problem. If $P(X|F)P(F) = P(X \cap F)$ is true. Then we already have half of the equation solved. $P(X \cap F)/P(F) = P(X)$ if the events are independent of one another and in the same sample space which shows their equivalency.
+     \\
+     
+     Now you might be wondering about the final part of the equation $P(X|\bar{F})P(\bar{F})$ It is important to note that If there are three events, T and $\bar{T}$ T being the sum of two dice being at least 10, and $\bar{T}$ being the sum of two dice being less than 10, and finally event W the blue die (out of red and blue) coming up 2. We can see that $P(T|W) + P(\bar{T}|W) = 1$ then $P(\bar{T}|W) = 1 - 0 = 1$. The reason this is important to note, is due to the end of the equation being added to the side that does not have a compliment. Given the previous equation is true, we can prove that despite the additive at the end, that the equation shows a bridge amongst all of the conversions from 0, to the value of 1. \\
+     
+     \\
+     \\
+     \\\\
+     \item Explain why $P(F|X) = P(X|F)P(F)/P(X)$ is another way of stating Theorem 4.2.1 Bayes’ Theorem.
+     \\\\
+     %Enter your answer below this comment line.  
+     $P(F|X) = P(X|F)P(F)/P(X)$ is another way to state Bayes Theorem due to the conversion of variables at the end of the Theorem. If we flip the problem, making it so $P(F|X)$ is the conclusion, we can deduce that $P(X \cap F)/P(X) = P(F|X)$ in addition to this, knowing that the equality for those conversions stand, we know that $P(X|F)P(F)/P(X|F)P(F) + P(X|\bar{F})P(\bar{F}) = P(X \cap F)/P(X)$ and if we look closely we can see that for the bottom half of this equation, it is actually equal to the state of P(X) on its own. From this, we can safely say thy if we were only to convert $P(X \cap F)$ then the remaining equation we would have is $P(X|F)P(F)/P(X) = P(F|X)$ which certifies the state of actuality in which our original equation can be fairly used as an example of Bayes Theorem
+     \\\\
+ \end{enumerate}
+ \subsection*{Part 2:}
+ A website reports that 70\% of its users are from outside a certain country. Out of their users from outside the country, 60\% of them log on every day. Out of their users from inside the country, 80\% of them log on every day.
+ \\
+ \begin{enumerate}[label=(\alph*)]
+ \item What percent of all users log on every day? Hint: Use the equation from Part 1 (a).
+ \\\\
+ %Enter your answer below this comment line.  
+The metrics we are given off the bat, are P(O) = 70$\%$ P(L) = 60$\%$ and $P(L|I)$ = 80$\%$ \\
+
+In order to get the percent of all users that log on every day, we have to account for all users, and the amount that each group logs on every day. Knowing these initial variables off the bat, we can find some others that are important as well. Using P(O) we can find P(I) which = 0.30 and we can find $P(L|O)$ which = 0.20. \\
+
+If P(I) represents the percentage that are from inside the country, and $P(L|O)$ is representative of those who log on every day that are from outside the country. \\
+
+The two specific values I want to focus on now are $P(L|I)$ and $P(L|O)$. Both are representative of the percentage of people who log on every day from two different data sets, and in order to combine these in order to get the total data set, we must understand the overall picture. Using the equation from Part 1 (a) if we were to insert the values, it would look something like this. $P(L) = P(L|I)P(I) + P(L|\bar{O})P(\bar{O})$ or something more readable, P(L) = 0.80 * 0.30 + 0.20 * 0.70 \\
+
+That leaves us with P(L) = 0.38 which is the percentage of all users that log on every day.
+ \\
+ 
+ \\\\
+ \item Using Bayes’ Theorem, out of users who log on every day, what is the probability that they are from inside the country?
+ \\\\
+ %Enter your answer below this comment line. 
+The probability that someone is from inside the country that logs on every day is P(I|L) = 0.63
+We can prove this using Bayes Theorem by using the given values in our equation to map out P(I|L) = 0.3 * 0.80/0.7 * 0.20 + 0.3 * 0.8
+
+ \\\\
+ \end{enumerate}
+\newpage
+  \section*{Problem 2}
+ \noindent
+ This question has 2 parts.
+ \subsection*{Part 1:}
+ The drawing below shows a Hasse diagram for a partial order on the set:
+ \\
+   $\{A, \;B,\; C,\; D,\; E,\; F,\; G,\; H,\; I, \; J\}$
+ \begin{center}
+ \includegraphics[width=2.5in]{New Hasse}
+ \end{center}
+ {\color{blue} {\bf Figure 1:} \emph{A Hasse diagram shows 10 vertices and 8 edges. The vertices, represented by dots, are as follows:  vertex J is upward of vertex H; vertex H is upward of vertex I; vertex B is inclined upward to the left of vertex A; vertex C is upward of vertex B; vertex D is inclined upward to the right of vertex C; vertex E is inclined upward to the left of vertex F; vertex G is inclined upward to the right of vertex E. The edges, represented by line segments between the vertices are as follows: 3 vertical edges connect the following vertices: B and C, H and I, and H and J; 5 inclined edges connect the following vertices: A and B, C and D, D and E, E and F, and E and G. 
+  }
+  }
+  \\\\
+ Determine the properties of the Hasse diagram based on the following questions:
+
+  \begin{enumerate}[label=(\alph*)]
+    \item What are the minimal elements of the partial order?
+\\\\
+  %Enter your answer below this comment line. 
+  Minimal elements for this partial order include I and A. 
+\\\\
+    \item What are the maximal elements of the partial order?
+\\\\
+  %Enter your answer below this comment line.  
+  Maximal elements include J, and G
+\\\\
+    \item Which of the following pairs are comparable?
+\[(A,\, D),\; (J,\, F),\; (B,\, E),\; (G,\, F),\; (D,\, B),\; (C,\, F),\; (H,\, I), (C,\, E)\]
+\\\\
+  %Enter your answer below this comment line.
+  The following pairs are comparable. (A,D), (G,F), (D,B), (H,I)
+\\\\
+   \end{enumerate}
+   \newpage
+
+\subsection*{Part 2:}
+Consider the partial order with domain $\{3,\, 5,\, 6, \,7,\, 10,\, 14,\, 20,\, 30,\, 60,\, 70\}$ and with $x\,\leq \,y$ if $x$ evenly divides $y$. Select the correct Hasse diagram for the partial order.
+
+\begin{enumerate}[label=(\alph*)]
+\item
+\fbox{
+\includegraphics[height=3in]{Figure 2}\\
+
+}
+\\\\
+{\color{blue}{\bf Figure 2:} \emph{A Hasse diagram shows a set of elements {3; 5; 6; 7; 10; 14; 20; 30; 60, 70}. There are lines connecting 3 and 6, 6 and 30, 30 and 60, 5 and 10, 10 and 20, 20 and 60, 10 and 70, 7 and 14, 14 and 70.
+}
+}
+\\
+\\
+  %Enter your answer below this comment line.  
+\\\\
+\newpage
+\item
+\fbox{
+ \includegraphics[height=3in]{Figure 3}
+}
+\\\\
+{\color{blue}{\bf Figure 3:} \emph{A Hasse diagram shows a set of elements {3; 5; 6; 7; 10; 14; 20; 30; 60, 70}. There are lines connecting 3 and 6, 6 and 30, 30 and 60, 5 and 10, 10 and 30, 10 and 20, 20 and 60, 10 and 70, 7 and 14, 14 and 70.
+}
+}
+\\
+\\
+  %Enter your answer below this comment line.
+  I think it is this one because it is the only diagram that is inclusive to all of the correct numbers. For example, in (d) 20 cannot be divided by 30, so I know that is wrong, in (c) 20 cannot evenly go into 70 so that is wrong, and in (a) 10 can go into 30 but it is not included in the diagram. Leaving (b) being the only diagram that shows every instance in which you can evenly divide the proper numbers into the higher ones, creating a diagram with no issues. 
+\\\\
+\newpage
+\item
+\fbox{
+ \includegraphics[height=3in]{Figure 4}\\
+}
+\\\\
+{\color{blue}{\bf Figure 4:} \emph{A Hasse diagram shows a set of elements {3; 5; 6; 7; 10; 14; 20; 30; 60, 70}. There are lines connecting 3 and 6, 6 and 30, 30 and 60, 5 and 10, 10 and 30, 10 and 20, 20 and 60, 20 and 70, 7 and 14, 14 and 70.
+}
+}
+\\
+\\
+  %Enter your answer below this comment line.  
+\\\\
+\newpage
+\item
+\fbox{
+\includegraphics[height=3in]{Figure 5}
+}
+\\\\
+{\color{blue}{\bf Figure 5:} \emph{A Hasse diagram shows a set of elements {3; 5; 6; 7; 10; 14; 20; 30; 60, 70}. There are lines connecting 3 and 6, 6 and 30, 30 and 60, 5 and 10, 10 and 30, 10 and 20, 20 and 30, 20 and 60, 10 and 70, 7 and 14, 14 and 70.
+}
+}
+\\\\
+  %Enter your answer below this comment line.  
+\\\\
+
+\end{enumerate}
+  \newpage
+  \section*{Problem 3}
+  A car dealership sells cars that were made in 2015 through 2020. Let the cars for sale be the domain of a relation R where two cars are related if they were made in the same year.
+
+  \begin{enumerate}[label=(\alph*)]
+    \item Prove that this relation is an equivalence relation.
+\\\\
+  %Enter your answer below this comment line.  
+  a relation R is an equivalence relation, in the case that R is reflexive, transitive, and symmetric. In this instance we are looking for equivalency between two points. If relation R is defined such that xRy if car x and car y were made in the same year, for the two cars, the relation R is reflexive because every car has the same year as itself, the relationship is symmetric because if car x was made in the same year that car y was then y must have been made in the same year that x was, and transitive because if car x and car y share the same manufacturing year and in the case a third car z ALSO had the same manufacturing year as car y, that would mean that x and z must also share the same manufacturing year. Making relation R an equivalence relation.
+\\\\
+    \item Describe the partition defined by the equivalence classes.
+\\\\
+  %Enter your answer below this comment line.  
+  Equivalence relations define a partition. In the case we consider an equivalence relation R over a set A, the set of all equivalence classes define a partition of A. In other words, Let us say that the set of cars that the car dealership has is equal to A. In addition, we can consider the same equivalence relation R over the set A. I think partitions are interesting because it introduces a type of duality, and punctuality of such a constant in real time. In other words, it is an applied instance in where something can be alive, or dead at the same time, similar to that of Schrodinger's cat theory. In this theory, the question that follows: If you were to take an alive cat, and put it in a box, with radioactive material that would give the cat a 50/50 chance to live or die, when you open the box, would the cat be dead or alive? What this question points out has little to do with the actual outcome of the cat, and more-so to do with the fact that at the moment in which the box is closed, the cat is both alive and dead at the same time, as you have not opened the box and do not know the answer. Now, you could say in a more applied sense that this does not make any sense, but the theoretical basis of something called the black box, is huge in many fields implemented in the real world today. Knowing this, we really can understand exactly what is going on in the set A, of cars at the dealership. Let's say, for a random variable of cars, x, that we know for sure that 2 of them have the same year, but are two different colors, red and blue. Not only does this show an instance of the partition of the set A, but it shows the capability that the set A has to express an equivalence relation as well. What I specifically want to point out though, is the perceptive reality that is altered upon the set based off of the black box, as if you decide to look at it one way by relation of color, for the two cars you would see no equivalence relation, but if you were to look at it in the other, then there would be. Just like Schrodinger's Cat.
+\\\\
+  \end{enumerate}
+\newpage
+  \section*{Problem 4}
+ Analyze each graph below to determine whether it has an Euler circuit and/or an Euler trail.
+ \begin{itemize}
+     \item If it has an Euler circuit, specify the nodes for one.
+     \item If it does not have an Euler circuit, justify why it does not.
+     \item If it has an Euler trail, specify the nodes for one.
+     \item If it does not have an Euler trail, justify why it does not.
+ \end{itemize}
+  \begin{enumerate}[label=(\alph*)]
+\item 
+\fbox{
+ \includegraphics[width=4in]{Figure 6}
+}
+\\\\
+{\color{blue} {\bf Figure 6:} \emph{An undirected graph has 6 vertices, a through f. There are 8-line segments that are between the following vertices: a and b, a and c, a and d, a and f, b and c, b and e, b and f, d and e. 
+  }
+}\\\\
+  %Enter your answer below this comment line.  
+  Yes, there is a Euler circuit at $D \to A \to B \to C \to A \to F \to B \to E \to D$
+  \\
+  
+  No, there is no Euler Trail, as the graph has 6 points and 8 line segments meaning that there is no way that I would be able to start, and not finish where I started while also including all lines once.
+\\\\
+   \newpage
+\item
+\fbox{
+\includegraphics[width=4in]{Figure 7}
+}
+\\\\
+{\color{blue} {\bf Figure 7:} \emph{
+An undirected graph has 6 vertices, a through f. There are 9-line segments that are between the following vertices: a and b, a and c, a and d, a and f, b and e, b and f, c and d, d and e, d and f. }
+}
+\\\\
+  %Enter your answer below this comment line.  
+  No there is no Euler circuits, it would be impossible for there to be one with 9 line segments. \\
+  
+  There is a Euler Trail at $F \to D \to C \to A \to F \to B \to A \to D \to E \to B$
+\\\\
+   \newpage
+\item 
+\fbox{
+\includegraphics[width=4in]{Figure 8}
+}
+\\\\
+{\color{blue} {\bf Figure 8: } \emph{An undirected graph has 5 vertices, a through e. There are 4-line segments that are between the following vertices: b and c, b and e, c and d, d and e. 
+  }
+}
+\\\\
+  %Enter your answer below this comment line.  
+  The graph is not connected which means it cannot have a Euler Circuit
+  
+  \\
+  
+  The graph cannot have a Euler Trail because the graph is not connected. \\
+  
+\\\\
+
+\newpage
+\item 
+\fbox{
+ \includegraphics[width=4in]{Figure 9}
+}
+\\\\
+{\color{blue} {\bf Figure 9:} \emph{An undirected graph has 7 vertices, a through g. There are 10-line segments that are between the following vertices: a and b, a and c, a and f, b and c, b and f, c and d, c and g, d and e, d and f, f and g. 
+  }
+}
+\\\\
+  %Enter your answer below this comment line.  
+  The graph cannot have a Euler Circuit because it cannot reach every line segment and point without going over a line segment twice. 
+  \\
+  
+  This graph cannot have a Euler Trail because it has an even amount of line segments. \\
+  
+\\\\
+
+
+  \end{enumerate}
+\newpage
+  \section*{Problem 5}
+  Use Prim's algorithm to compute the minimum spanning tree for the weighted graph. Start the algorithm at vertex A. Explain and justify each step as you add an edge to the tree.
+\\
+\includegraphics[width=5in]{prim}
+\\\\
+{\color{blue} {\bf Figure 10:} \emph{A weighted graph shows 5 vertices, represented by circles, and 6 edges, represented by line segments. Vertices A, B, C, and D are placed at the corners of a rectangle, whereas vertex E is at the center of the rectangle. The edges, A B, B D, A C, C D, A E, and E C, have the weights, 7, 3, 2, 4, 5, and 6, respectively.
+  }
+}
+\\\\
+  %Enter your answer below this comment line.  
+  Starting at vertex A, we create a T of edges incident to A. Which gives us line segments 2, 7, and 5. \\
+  
+  We select the line with the minimum weight, in this case it is 2, and add it's endpoint, C to the tree. Now the endpoints available are the ones we had originally, minus 2, in addition to those that are spanning from C.\\
+  
+  This means that we can choose from line segments 4, 6, 5, and 7. Given that the lowest value line segment is 4, connecting C to D. We choose this line in order to compute the minimum spanning tree further. \\
+  
+  We then continue the cycle with the addition of line segment 3, which also happens to be our lowest valued line segment which leads us from D to B. \\
+  
+  To recap, this has been our path so far $A \to C \to D \to B$ (A,C) = 2, (C,D) = 4, and (D,B) = 3. Giving our total tree so far a value of 9. As of right now, the only eligible path to take is A to E as it will finish our minimum spanning tree, due to all of the other incident vertices being within the proximity of other vertexes. \\
+  
+  Leaving our total tree looking like $A \to C \to D \to B \ and \ A \to E$ which means our total minimum weight spanning tree has a value of 14.
+\\\\
+ \newpage
+  \section*{Problem 6}
+A lake initially contains 1000 fish. Suppose that in the absence of predators or other causes of removal, the fish population increases by 10\% each month. However, factoring in all causes, 80 fish are lost each month.\\
+
+Give a recurrence relation for the population of fish after $n$ months. How many fish are there after 5 months? If your fish model predicts a non-integer number of fish, round down to the next lower integer.
+\\\\
+  %Enter your answer below this comment line.  
+  A lake initially contains 1000 fish. \\
+  
+  a = 1000 \\
+  
+  Each Month the population increases by 10$\%$ \\
+  
+  To account for the exponential growth of 10$\%$ each month, we multiply the set a by 1.10 each month. \\
+  
+  For example, for 5 months, the equation of the recurrence relation would look like this: \\
+  
+  a(0) = 1000 \\
+  
+  a(n) = (1.10) * a n-1 - 80 for n $\geq$ 1 \\
+  
+  a(1) =  1020 \\
+  
+  a(2) =  1042 \\
+  
+  a(3) =  1066.2 \\
+  
+  a(4) = 1092.82 \\
+  
+  a(5) = 1122.102 \\
+  
+  Meaning that the recurrence relation for the population of fish after 5 months, rounding down to account for the non integer number of fish, would equate to 1122 fish. 
+  
+  
+\\\\
+\end{document}
+
