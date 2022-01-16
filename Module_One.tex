@@ -1,0 +1,208 @@
+\section*{Problem 1}
+
+In the following question, the domain of {\bf discourse} is a set of male patients in a clinical study. Define the following predicates:\\
+\begin{itemize}
+  \item $P(x):\; x$ was given the placebo\\\\ \;P(x): x is odd\\
+  \item $D(x):\; x$ was given the medication\\\\ \;D(x): x is even\\
+  \item $M(x): \; x$ had migraines\\\\ \;M(x): x is prime\\
+  
+  \; Defining the following predicates, I had a difficult time with. I was trying to find a proper example in the zybooks to be absolutely sure of what I was doing and what I needed in order to submit. I concluded that taking an instantaneous example within the domain would suffice. The reason this is proper is due to the instance of the predicate being defined, such as what some of the features of x are and what domain it lies in. I would also like to point out that if we were to define x itself, i.e. x = Bob. This would not be the same thing, as we would not be defining the predicate, and instead would be defining the variable by giving it some type of value. This would instead mean that the predicate would be a statement, and not a predicate. \\
+\end{itemize}
+Translate each of the following statements into a logical expression. Then negate the expression by adding a negation operation to the beginning of the expression. Apply De Morgan's law until each negation operation applies directly to a predicate and then translate the logical expression back into English.\\\\
+
+{\it
+Sample question: Some patient was given the placebo and the medication.\\
+\begin{itemize}
+  \item $\exists x\; (P(x)\; \land \; D(x))$\\
+  \item Negation: $\neg \exists x\; (P(x)\; \land \; D(x))$\\
+  \item Applying De Morgan's law: $\forall x\; (\neg P(x)\; \lor \; \neg D(x))$\\
+  \item English: Every patient was either not given the placebo or not given the medication (or both).\\
+  
+  For the below questions (A, B, and C) The way that I approached these questions initially was to compartmentalize the different pieces of the sentence, in order to understand every part of the equation. For A, as an example EVERY PATIENT is = to FOR ALL patients. In addition to this, we have to include the two variables, and then use the proper\\
+  
+  terminology, \lor \\
+  
+  to express mathematically within the equation what the logical equivalence is or is not in order to manipulate the problem.
+  The way I think of these problems basically are relative for me to trigonometric functions. What I mean by this, is that you have a state of existence, and then you have a beginning, an end, and a structured state of law that determines in which path you go based off of the initial interpretation or creation of the actuality of being in the proposition and instance of expression that is being stated. Realistically, I try to think on a minimal level in order to understand the counterpart of the transition and evolution.
+\end{itemize}
+}
+\newpage
+%--------------------------------------------------------------------------------------------------
+
+\begin{enumerate}[label=(\alph*)]
+
+\item Every patient was given the medication or the placebo or both.\\\\
+%Enter your answer below this comment line.
+\forall (D(x) \lor P(x)) \\\\
+Negation: \neg \forall D(x) \lor P(x)) \\\\
+
+Applying De Morgan's Law: \exists x (\neg D(x) \land \neg P(x)) \\\\
+
+There is a patient who was not given the medication, and not given the placebo.
+\\\\
+
+\item Every patient who took the placebo had migraines. (Hint: you will need to apply the conditional identity, $p \to q \equiv \neg p \lor q$.)\\\\
+%Enter your answer below this comment line.
+\forall x (P(x)\rightarrow M(x)) \\\\
+
+Negation: \neg \forall x (P(x) \rightarrow M(x)) \\\\
+
+Applying De Morgan's Law: \exists x (P(x) \land \neg M(x)) \\\\
+
+Some patient took the placebo and did not have migraines \\\\
+\\\\
+
+\item There is a patient who had migraines and was given the placebo.\\\\
+%Enter your answer below this comment line.
+\exists x (M(x) \land P(x)) \\\\
+
+Negation: \neg \exists x (M(x) \land P(x)) \\\\
+
+Applying De Morgan's Law: \forall x ( \neg M(x) \lor \neg P(x)) \\\\
+
+English: Every patient did not have migraines or did not take the placebo.
+
+\\\\
+\end{enumerate}
+
+\newpage
+%--------------------------------------------------------------------------------------------------
+
+
+\section*{Problem 2}
+
+Use De Morgan's law for quantified statements and the laws of propositional logic to show the following equivalences:\\
+\begin{enumerate}[label=(\alph*)]
+\item $\neg \forall x \, \left(P(x) \land \neg Q(x) \right)\; \equiv \; \exists x \, \left(\neg P(x) \lor  Q(x) \right)$\\\\
+%Enter your answer below this comment line.
+x = All Birds p: can fly q: can swim \\
+Not every bird can fly AND Not every bird cannot swim \\
+Is logically equivalent to \\
+There exists a bird that cannot fly OR There exists a bird that can swim
+\\\\
+\item $\neg \forall x \, \left(\neg P(x) \to Q(x) \right)\; \equiv \; \exists x \, \left(\neg P(x) \land  \neg Q(x) \right)$\\\\
+%Enter your answer below this comment line.
+x = All Plants p: can fly q: can swim\\
+Not every plant CANNOT fly IF they CANNOT fly THEN Not every plant CAN swim \\
+is logically equivalent to \\
+There exists a plant that CANNOT fly AND CANNOT swim
+\\\\
+\item $\neg \exists x \, \big(\neg P(x) \lor \left(Q(x) \land \neg R(x) \right)\big)\; \equiv \; \forall x \,\big( P(x) \land \left( \neg Q(x) \lor R(x) \right)\big)$\\\\
+%Enter your answer below this comment line.
+x = All Dinosaurs p: can fly q: can swim r: can jump\\
+It is not true that there is a dinosaur that CANNOT fly OR a dinosaur that CAN swim AND CANNOT jump
+is logically equivalent to 
+Every dinosaur CAN fly AND CANNOT swim OR CAN jump
+
+\\\\
+\end{enumerate}
+
+
+\newpage
+%--------------------------------------------------------------------------------------------------
+
+
+
+
+\section*{Problem 3}
+
+The domain of {\bf discourse} for this problem is a group of three people who are working on a project. To make notation easier, the people are numbered $1, \;2, \;3$. The predicate $M(x,\; y)$ indicates whether x has sent an email to $y$, so $M(2, \;3)$ is read ``Person $2$ has sent an email to person $3$.'' The table below shows the value of the predicate $M(x,\;y)$ for each $(x,\;y)$ pair. The truth value in row $x$ and column $y$ gives the truth value for $M(x,\;y)$.\\\\
+\[
+ \begin{array}{||c||c|c|c||}
+\hline\hline
+M & 1 & 2& 3\\
+\hline\hline
+1 &T & T & T\\
+\hline
+2 &T & F & T\\
+\hline
+3 &T & T & F\\
+\hline\hline
+    \end{array}
+    \]\\\\
+{\bf Determine if the quantified statement is true or false. Justify your answer.}\\
+
+\begin{enumerate}[label=(\alph*)]
+
+\item $\forall x \, \forall y \left(x\not= y)\;\to \;  M(x,\;y)\right)$\\\\
+%Enter your answer below this comment line.
+For every pair of x, and y if x and y are different people then x sent an email to y. This is true because in the truth chart, you can see that everyone sent an email to everyone else shown in the two false statements for 2, 2 and 3, 3 which says person 2 did not send an email to themselves, and person 3 did not send an email to themselves.
+\\\\
+
+\item $\forall x \, \exists y \;\; \neg M(x,\;y)$\\\\
+%Enter your answer below this comment line.
+For every choice of x there exists a y that did not send an email to x and y.
+This is true because initially it is not stated that x cannot equal y, which means that the people can be different, and if there is an instance of person 2, and person 3, not sending an email to themselves. That is what satisfies this truth set. Though if x was equal to person 1 and y was equal to person 3, then we would have a different example and the statement would be False because we can see that person 1 sent an email to everyone including himself.
+\\\\
+\item $\exists x \, \forall y \;\; M(x,\;y)$\\\\
+There exists a choice of x, for every choice of y that sent an email. This is false because if x was person 2 and y is person 3 there is always one instance in which there was not an email sent, and because it is not established that x cannot equal y, that means that this truth statement cannot be satisfied due to person 2 and 3 not sending emails to themselves. An instance of this to satisfy the truth statement would be person 1, but even in the case there was a mixture of person 1, and say person 2. The truth statement would still be false due to person 2 not sending an email to everyone including themselves, even if person 1 did. 
+\\\\
+\end{enumerate}
+
+\newpage
+%--------------------------------------------------------------------------------------------------
+
+
+\section*{Problem 4}
+
+Translate each of the following English statements into logical expressions. The domain of {\bf discourse} is the set of all real numbers.\\
+\begin{enumerate}[label=(\alph*)]
+
+\item The reciprocal of every positive number less than one is greater than one.\\\\
+%Enter your answer below this comment line.
+\forall Y:[(y > 0) \land (y < 1) = (1/y > 1)]
+\\\\
+
+\item There is no smallest number.\\\\
+%Enter your answer below this comment line.
+n (( 3 x \forall y (x < y))
+\\\\
+
+\item Every number other than 0 has a multiplicative inverse.\\\\
+%Enter your answer below this comment line.
+\forall x (( x \neq 0) = (3y(xy = 1) ))
+\\\\
+\end{enumerate}
+
+
+
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+
+\section*{Problem 5}
+The sets $A$, $B$, and $C$ are defined as follows:\\
+
+\[A = {tall, grande, venti}\]
+\[B = {foam, no-foam}\]
+\[C = {non-fat, whole}\]\\
+Use the definitions for $A$, $B$, and $C$ to answer the questions. Express the elements using $n$-tuple notation, not string notation.\\
+\begin{enumerate}[label=(\alph*)]
+  \item Write an element from the set $A\, \times \,B \, \times \,C$.\\\\
+%Enter your answer below this comment line.
+A = \{ a, b\}\\
+B = \{1, 2\}\\
+C = \{x, y\}\\
+
+(a, 2, x)\\
+(b, 1, y)
+\\\\
+  \item Write an element from the set $B\, \times \,A \, \times \,C$.\\\\
+%Enter your answer below this comment line.
+A = \{ a, b\}\\
+B = \{1, 2\}\\
+C = \{x, y\}\\
+
+(1, b, y)\\
+(2, a, x)
+\\\\
+  \item Write the set $B \, \times \,C$ using roster notation.\\\\
+%Enter your answer below this comment line.
+B = A, B\\
+C = 1, 2\\
+B x C = \{(A, 1), (A, 2), (B, 1), (B, 2)\}
+
+\\\\
+\end{enumerate}
+
+\end{document}
