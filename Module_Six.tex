@@ -1,0 +1,442 @@
+\section*{Problem 1}
+
+
+For parts (a) and (b), indicate if each of the two graphs are equal. Justify your answer.\\
+ \begin{enumerate}[label=(\alph*)]
+ 
+
+  \item
+   \fbox{
+\includegraphics[width=1.5in]{M6-fig1}
+
+}
+\hfil
+  \fbox{
+
+\includegraphics[width=1.5in]{M6-fig2}
+
+}
+\\\\
+\\\\
+ {\color{blue}{\bf Figure 1:} \emph{Left: An undirected graph has 5 vertices. The vertices are arranged in the form of an inverted pentagon. From the top left vertex, moving clockwise, the vertices are labeled: a, b, c, d, and e. Undirected edges, line segments, are between the following vertices: a and b; a and c; b and c; c and d; e and d; and e and c. \\
+ }
+ }\\
+{\color{blue}{\bf Figure 2:} \emph{
+  Right: The adjacency list representation of a graph. The list shows all the vertices, a through e, in a column from top to bottom. The adjacent vertices for each vertex in the column are placed in a row to the right of the corresponding vertex’s cell in the column. An arrow points from each cell in the column to its corresponding row on the right. Data from the list, as follows: Vertex a is adjacent to vertices b and c. Vertex b is adjacent to vertices a and c. Vertex c is adjacent to vertices a, b, d, and e. Vertex d is adjacent to vertices c and e. Vertex e is adjacent to vertices c and d.
+}
+}
+\\\\
+%Enter your answer below this comment line.
+The two charts are equal. The first thing that I did was compare each of the graphs together. I made sure that A, B, C, D, and E were all present in both graphs to assess for any unknown or left out variables. After this, I then made sure that each variable could be connected to the latter in the right handed chart, by seeing if there were any additional connections between each variable, or if there were any that lacked any type of connection.
+\newpage
+ \item
+  \fbox{
+   \includegraphics[width=1.5in]{M6-fig3}
+}
+\hfil
+  \fbox{
+$
+\left( \begin{array}{ccccc}
+0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1\\
+1 & 0 & 0 & 1 & 0\\
+1 & 0 & 1 & 0 & 1\\
+0 & 1 & 0 & 1 & 0
+\end{array} \right)
+$
+}\\\\
+\\
+\\
+   {\color{blue}{\bf Figure 3:} \emph{An undirected graph has 5 vertices. The vertices are arranged in the form of an inverted pentagon. Moving clockwise from the top left vertex a, the other vertices are, b, c, d, and e. Undirected edges, line segments, are between the following vertices: a and c; a and d; d and c; and e and b. 
+  \\\\
+}
+}
+%Enter your answer below this comment line.
+These two graphs are not equal. The first thing that I did was check the amount of vertices in both the matrix graph and pentagon. They both have 5 vertices meaning that they could be the same. Next I had to make sure that the matrix graph made sense. {1,3} = A to C, {3,1} = C to A, {4,1} and {1,4} = A to D and D to A, {3,4} and {4,3} = C to D and D to C, {2,5} and {5,2} = B to E and E to B, and then what makes these two graphs not equal are {4,5} and {5,4}. The reason this makes it not equal is that this would mean that D is connected to E which it is not, nor is E connected to D. Secondly, in the case that this were true, as the chart appears that it might be, then there would be additional indicators in the matrix chart to show that B and C or C and B are also connected, which there are not.  
+
+ \newpage
+
+ \
+%--------------------------------------------------------------------------------------------------
+
+\item Prove that the two graphs below are isomorphic.\\\\
+   \fbox{
+\includegraphics[width=2in]{M6-fig4}
+}\\\\
+ {\color{blue}{\bf Figure 4:} \emph{Two undirected graphs. Each graph has 6 vertices. The vertices in the first graph are arranged in two rows and 3 columns. From left to right, the vertices in the top row are 1, 2, and 3. From left to right, the vertices in the bottom row are 6, 5, and 4. Undirected edges, line segments, are between the following vertices: 1 and 2; 2 and 3; 1 and 5; 2 and 5; 5 and 3; 2 and 4; 3 and 6; 6 and 5; and 5 and 4. The vertices in the second graph are a through f. Vertices d, a, and c, are vertically inline. Vertices e, f, and b, are horizontally to the right of vertices d, a, and c, respectively. Undirected edges, line segments, are between the following vertices: a and d; a and c; a and e; a and b; d and b; a and f; e and f; c and f; and b and f.
+}
+}
+\\\\
+%Enter your answer below this comment line.
+For G(1) and G(2) if G(1) = (V1,E1) and G(2) = (V2,E2) \\
+
+G1: {1,2}, {1,5}, {2,3}, {2,4}, {2,5}, {3,5}, {3,6}, {4,5}, {5,6} \\
+
+G2: {A,C}, {A,D}, {A,F}, {A,E}, {A,B}, {B,D}, {B,F}, {C,F}, {E,F} \\
+
+f(1) = C f(2) = F f(3) = B f(4) = E f(5) = A f(6) = D
+\\
+
+
+\\\\
+\item Show that the pair of graphs are not isomorphic by showing that there is a property that is preserved under isomorphism which one graph has and the other does not.\\
+
+\fbox{
+\includegraphics[width=2in]{M6-fig5}
+}\\\\
+{\color{blue}{\bf Figure 5:} \emph{Two undirected graphs. The first graph has 5 vertices, in the form of a regular pentagon. From the top vertex, moving clockwise, the vertices are labeled: 1, 2, 3, 4, and 5. Undirected edges, line segments, are between the following vertices: 1 and 2; 2 and 3; 3 and 4; 4 and 5; and 5 and 1. The second graph has 4 vertices, a through d. Vertices d and c are horizontally inline, where vertex d is to the left of vertex c. Vertex a is above and between vertices d and c. vertex b is to the right and below vertex a, but above the other two vertices. Undirected edges, line segments, are between the following vertices: a and b; b and c; a and d; d and c; d and b.
+}
+}
+\\
+\\
+%Enter your answer below this comment line.
+The graph on the left has 5 vertices and the graph on the right has 4. Thus these two graphs cannot be isomorphic to one another which is preserved under isomorphism.
+\\\\
+
+\end{enumerate}    
+    
+ \newpage
+
+ 
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 2}    
+    
+Refer to the undirected graph provided below:
+\\\\
+  \fbox{
+
+\includegraphics[width=2in]{M6-fig6}
+
+}\\\\
+{\color{blue}{\bf Figure 6:} \emph{An undirected graph has 9 vertices. 6 vertices form a hexagon, which is tilted upward to the right. Starting from the leftmost vertex, moving clockwise, the vertices forming the hexagon shape are: D, A, B, E, I, and F. Vertex H is above and to the right of vertex B. Vertex G is the rightmost vertex, below vertex H and above vertex E. Vertex C is the bottommost vertex, a little to the right of vertex E. Undirected edges, line segments, are between the following vertices: A and D; A and B; B and F; B and H; H and G; G and E; B and E; A and E; E and I; I and C; I and F; and F and D.
+}
+}
+\\
+\\
+    \begin{enumerate}[label=(\roman*)]
+        \item What is the maximum length of a path in the graph? Give an example of a path of that length.\\\\
+           %Enter your answer here.
+           A path is a trail in which no vertex occurs more than once. The longest path in this graph has a length of 9. It is an open walk starting at F and ending at C. \\
+           
+           F \to D \to A \to B \to H \to G \to E \to I \to C
+           \\
+           
+\\\\
+        \item What is the maximum length of a cycle in the graph? Give an example of a cycle of that length.\\\\
+           %Enter your answer here.
+           A cycle, similar to a path, also is a trail in which no vertex can occur more than once, with the exception of the first and last points which are considered to be the same. In this instance, the biggest cycle is also 9, starting at F and Ending at F. \\
+           
+           F \to D \to A \to B \to H \to G \to E \to I \to F
+           \\
+           
+\\\\
+        \item Give an example of an open walk of length five in the graph that is a trail but not a path.\\\\
+          E \to A \to B \to E \to G \to H \\
+          
+\\\\
+        \item Give an example of a closed walk of length four in the graph that is not a circuit.\\\\
+           E \to I \to C \to I \to E \\
+           
+\\\\
+        \item Give an example of a circuit of length zero in the graph.\\\\
+           I \to I \\
+           
+\\\\
+    \end{enumerate}
+    \newpage
+    
+
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 3}
+
+\begin{enumerate}[label=(\alph*)]
+\item Find the connected components of each graph.\\
+    \begin{enumerate}[label=(\roman*)]
+    \item $G = (V, \,E).\quad V = \{a,\, b,\, c,\, d,\,  e\}.\quad E = \emptyset$\\\\
+%Enter your answer below this comment line.
+There is no way to really know as the components are all equal to theta. \\
+
+\\\\
+    \item $G = (V,\, E).\quad V = \{a,\, b,\, c,\, d,\, e,\, f\}.\quad E = \{ \{c,\, f\}, \,\{a,\, b\},\, \{d,\, a\}, \,\{e,\, c\},\, \{b,\, f\} \}$\\\\
+%Enter your answer below this comment line.
+{a, b, c, d, e, f} this is the answer because you can see in E that all of the components are connected together. \\
+
+\\\\
+    \end{enumerate}
+\item Determine the edge connectivity and the vertex connectivity of each graph.\\
+
+    \begin{enumerate}[label=(\roman*)]    
+ \item
+\fbox{
+
+\includegraphics[width=2in]{M6-fig7}
+
+}
+\\\\
+{\color{blue}{\bf Figure 7:} \emph{An undirected graph has 8 vertices, 1 through 8. 4 vertices form a rectangular-shape on the left. Starting from the top left vertex and moving clockwise, the vertices of the rectangular shape are, 1, 2, 3, and 4. 3 vertices form a triangle on the right, with a vertical side on the left and the other vertex on the extreme right. Starting from the top vertex and moving clockwise, the vertices of the triangular shape are, 7, 8, and 5. Vertex 6 is between the rectangular shape and the triangular shape. Undirected edges, line segments, are between the following vertices: 1 and 2; 2 and 3; 3 and 4; 4 and 1; 2 and 6; 4 and 6; 3 and 6; 6 and 7; 6 and 8; 6 and 5; 7 and 5; 7 and 8; and 5 and 8.
+\\
+}
+}
+\\
+\\
+%Enter your answer below this comment line.
+If you divide the vertices into two sets, which would equal K4 which would mean that there are at the very least 3 edges. Which means edge connectivity = 3. \\
+
+Vertex connectivity is 1 as if you remove the 6th vertex then vertex 1 cannot get to vertex 8.
+
+
+\\\\
+\newpage
+\item  
+
+\fbox{
+
+\includegraphics[width=2in]{M6-fig8}
+
+}
+\\\\
+{\color{blue}{\bf Figure 8:} \emph{An undirected graph has 8 vertices, 1 through 8. 4 vertices form a rectangular shape in the center. Starting from the top left vertex and moving clockwise, the vertices of the rectangular shape are, 3, 7, 5, and 6. Vertex 2 is at about the center of the rectangular shape. Vertex 8 is to the right of the rectangular shape. Vertex 1 and 4 are to the left of the rectangular shape, horizontally in-line with vertices 3 and 6, respectively. Undirected edges, line segments, are between the following vertices: 1 and 3; 3 and 7; 3 and 4; 3 and 6; 3 and 2; 4 and 2; 4 and 6; 6 and 2; 6 and 5; 2 and 5; 2 and 7; 2 and 8; 7 and 5; 7 and 8; and 5 and 8. 
+\\
+}
+\\
+\\}
+%Enter your answer below this comment line.
+
+Again, if you divide 8 in half, then you have an edge connectivity of 3. We can see the application of this by eliminating 2 and either 7,5 or 3,6
+\\
+
+The vertex connectivity again is 2 because if you eliminate 7,5 or 3,6 then you will be stopping 1 and 8 from being connected to one another.
+\\\\
+    \end{enumerate}
+\end{enumerate}
+
+
+
+ \newpage
+ 
+
+\section*{Problem 4}
+For parts (a) and (b) below, find an Euler circuit in the graph or explain why the graph does not have an Euler circuit.\\
+\begin{enumerate}[label=(\alph*)]
+\item
+\fbox{
+
+\includegraphics[width=2in]{M6-fig9}\\
+
+}\\\\
+{\color{blue}{\bf Figure 9:} \emph{An undirected graph has 6 vertices, a through f. 5 vertices are in the form of a regular pentagon, rotated 90 degrees clockwise. Hence, the top vertex becomes the rightmost vertex. From the bottom left vertex, moving clockwise, the vertices in the pentagon shape are labeled: a, b, c, e, and f. Vertex d is above vertex e, below and to the right of vertex c. Undirected edges, line segments, are between the following vertices: a and b; a and c; a and d; a and f; b and f; b and c; b and e; c and d; d and e; and d and f. Edges c f, a d, and b e intersect at the same point.
+\\
+}
+}
+\\
+\\
+%Enter your answer below this comment line.
+This is a euler circuit because there is a walk in which every edge can be included. e,d,c,b,a,f,d,a,c,f,b,e \\
+we can be sure of this due to the number of the list - 1 which equates to the number of edges which is 11.
+
+\\\\
+
+\newpage
+\item
+\fbox{
+ \includegraphics[width=2in]{M6-fig10}
+}\\\\
+{\color{blue}{\bf Figure 10:} \emph{An undirected graph has 7 vertices, a through g. 5 vertices are in the form of a regular pentagon, rotated 90 degrees clockwise. Hence, the top vertex becomes the rightmost vertex. From the bottom left vertex, moving clockwise, the vertices in the pentagon shape are labeled: a, b, c, e, and f. Vertex d is above vertex e, below and to the right of vertex c. Vertex g is below vertex e, above and to the right of vertex f. Undirected edges, line segments, are between the following vertices: a and b; a and c; a and d; a and f; b and f; b and c; b and e; c and d; c and g; d and e; d and f; and f and g.
+\\
+}
+}
+\\
+\\
+%Enter your answer below this comment line.
+This graph does show a euler circuit as there is a closed walk in which every edge is included once. 
+g,f,a,b,c,d,e,b,f,d,a,c,g
+
+\\\\
+
+\newpage
+
+\item
+For each graph below, find an Euler trail in the graph or explain why the graph does not have an Euler trail.\\
+
+{\it (Hint: One way to find an Euler trail is to add an edge between two vertices with odd degree, find an Euler circuit in the resulting graph, and then delete the added edge from the circuit.)}\\
+\begin{enumerate}[label=(\roman*)]
+\item
+\fbox{
+
+\includegraphics[width=2in]{M6-fig11}\\
+
+}
+\\\\
+{\color{blue}{\bf Figure 11:} \emph{An undirected graph has 6 vertices, a through f. 5 vertices are in the form of a regular pentagon, rotated 90 degrees clockwise. Hence, the top vertex becomes the rightmost vertex. From the bottom left vertex, moving clockwise, the vertices in the pentagon shape are labeled: a, b, c, e, and f. Vertex d is above vertex e, below and to the right of vertex c. Undirected edges, line segments, are between the following vertices: a and b; a and c; a and d; a and f; b and f; b and c; c and d; c and f; d and e; and d and f.
+}
+}
+\\\\
+%Enter your answer below this comment line.
+This graph does include a euler trail. \\
+
+e,d,c,b,a,f,d,a,c,f,b \\
+
+\\\\
+\item \fbox{
+
+\includegraphics[width=2in]{M6-fig12}\\
+
+}
+\\\\
+{\color{blue}{\bf Figure 12:} \emph{An undirected graph has 6 vertices, a through f. 5 vertices are in the form of a regular pentagon, rotated 90 degrees clockwise. Hence, the top vertex becomes the rightmost vertex. From the bottom left vertex, moving clockwise, the vertices in the pentagon shape are labeled: a, b, c, e, and f. Vertex d is above vertex e, below and to the right of vertex c. Undirected edges, line segments, are between the following vertices: a and b; a and c; a and d; a and f; b and f; b and c; b and e; c and d; d and e; and d and f. Edges c f, a d, and b e intersect at the same point.
+\\
+}
+}
+\\\\
+%Enter your answer below this comment line.
+There is no euler trail because each point has an even degree and therefore cannot end on a different point than it started and not go over an edge more than one times.
+\end{enumerate}
+\end{enumerate}
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 5}
+
+Consider the following tree for a prefix code:\\
+\fbox{
+\includegraphics[width=2in]{M6-fig13}\\
+}
+\\\\
+{\color{blue}{\bf Figure 13:} \emph{A tree with 5 vertices. The top vertex branches into character, a, on the left, and a vertex on the right. The vertex in the second level branches into character, e, on the left, and a vertex on the right. The vertex in the third level branches into two vertices. The left vertex in the fourth level branches into character, c, on the left, and character, n, on the right. The right vertex in the fourth level branches into character, d, on the left, and character, y, on the right. The weight of each edge branching left from a vertex is 0. The weight of each edge branching right from a vertex is 1.
+\\
+}
+}
+\\
+\\
+
+\begin{enumerate}[label=(\alph*)]
+\item Use the tree to encode ``day''.\\\\
+%Enter your answer below this comment line.
+1110 0 1111
+
+\\\\
+\item Use the tree to encode ``candy''.\\\\
+%Enter your answer below this comment line.
+1100 0 1101 1110 1111
+\\\\
+\item Use the tree to decode $``1110101101''$.\\\\
+%Enter your answer below this comment line.
+d, 1110, e, 10, n 1101 \\
+
+den \\
+
+\\\\
+\item Use the tree to decode $``111001101110010''$.\\\\
+%Enter your answer below this comment line.
+1110, d, 0, a, 1101, n, 1100, c, 10, e \\
+
+dance \\
+
+\\\\
+
+\end{enumerate}
+
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 6}
+
+\fbox{
+\includegraphics[width=2in]{M6-fig14}\\
+}\\\\
+{\color{blue}{\bf Figure 14:} \emph{A tree diagram has 9 vertices. The top vertex is d. Vertex d has three branches to vertices, f, b, and a. Vertex b branches to three vertices, i, h, and e. Vertex a branches to vertex c. Vertex c branches to vertex g.
+\\
+}
+}
+\\
+\\
+\begin{enumerate}[label=(\alph*)]
+\item Give the order in which the vertices of the tree are visited in a post-order traversal.\\\\
+%Enter your answer below this comment line.
+f,i,h,e,b,g,c,a,d \\
+
+\\\\
+\item Give the order in which the vertices of the tree are visited in a pre-order traversal.\\\\
+%Enter your answer below this comment line.
+d,f,b,i,h,e,a,c,g \\
+
+\\\\
+\end{enumerate}
+
+
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 7}
+Consider the following tree. Assume that the neighbors of a vertex are considered in alphabetical order.
+\\
+\fbox{
+ \includegraphics[width=2in]{M6-fig15}\\
+}\\\\
+{\color{blue}{\bf Figure 15:} \emph{A graph has 7 vertices, a through g, and 10 edges. Vertex e on the left end is horizontally inline with vertex g on the right end. Vertex b is below and to the right of vertex e. Vertex c is above vertex e and to the right of vertex b. Vertex f is between and to the right of vertices c and b. Vertex f is horizontally inline with vertices e and g. Vertex a is above and to the right of vertex f. Vertex d is below and to the right of vertex f. Vertex a is vertically inline with vertex d. Vertex g is between and to the right of vertices a and d. The edges between the vertices are as follows: e and b; b and c; c and f; c and a; a and d; b and f; f and a; f and d; a and g; and d and g.
+}
+}
+\\
+\\
+\begin{enumerate}[label=(\alph*)]
+    \item Give the tree resulting from a traversal of the graph below starting at vertex a using BFS. \\\\
+    %Enter your answer below this comment line.
+    a,c a,d a,f a,g c,f c,b b,e b,f f,d d,g
+\\
+    \item Give the tree resulting from a traversal of the graph below starting at vertex a using DFS.\\\\
+    %Enter your answer below this comment line.
+    a,c c,b b,e b,f f,d d,g \\
+    
+\end{enumerate}
+
+\newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 8}
+An undirected weighted graph G is given below:\\\\
+\fbox{
+ \includegraphics[width=2in]{M6-fig16}\\
+}
+\\\\
+{\color{blue}{\bf Figure 16:} \emph{An undirected weighted graph has 6 vertices, a through f, and 9 edges. Vertex d is on the left. Vertex f is above and to the right of vertex d. Vertex e is below and to the right of vertex f, but above vertex d. Vertex c is below and to the right of vertex e. Vertex a is above vertex e and to the right of vertex c. Vertex b is below and to the right of vertex a, but above vertex c. The edges between the vertices and their weight are as follows: d and f, 1; d and e, 4; f and e, 2; e and a, 2; f and a, 3; e and c, 5; c and a, 7; c and b, 5; and a and b, 6.
+\\
+}
+}
+\\
+\\
+\begin{enumerate}[label=(\alph*)]
+\item Use Prim's algorithm to compute the minimum spanning tree for the weighted graph. Start the algorithm at vertex a. Show the order in which the edges are added to the tree.\\\\
+%Enter your answer below this comment line.
+If we start the algorithm at vertex a, then we have to first create a T. This T would consist of the most incident edges to the originality point, which in this case is F, E, and B. We then select the minimum weighted edge which in this case is E which has a value of 2. This goes on to choose F, and then D. as those are the two next minimum weighted edges. This eliminates D \to E \\
+
+because E is already in the tree. We now have a tree that looks like this. A \to E \to F \to D. \\
+
+And we have eliminated D \to E \ and \ A \to F. \\
+
+Lastly, the tree continues to branch from E \to C \ and \ C \to B \\
+
+which cancels out A \to C \ and \ B \to A. 
+\\
+
+Giving us the minimum spanning tree using Prims algorithm.\\ 
+ \\
+
+\\\\
+\item What is the minimum weight spanning tree for the weighted graph in the previous question subject to the condition that edge $\{d,\, e\}$ is in the spanning tree?\\\\\\\\
+    %Enter your answer here.
+    If we were to include D \to E \\
+    
+    in the weighted graph. We would get 2 + 2 + 1 + 4 + 5 + 5 which equates to 19.
+     \\
+    
+\item How would you generalize this idea? Suppose you are given a graph G and a particular edge $\{u,\,v\}$ in the graph. How would you alter Prim's algorithm to find the minimum spanning tree subject to the condition that $\{u,\,v\}$ is in the tree?\\\\
+%Enter your answer below this comment line.
+According to Prims algorithm. Graphs have the ability to have more than one minimum spanning tree. In the case there is an inconclusive answer due to the fact that there are multiple trees available to be chosen, we equate the problem with every minimum spanning tree having n - 1 weight. In addition to this, every spanning tree is also a minimum spanning tree. The reason I believe this is the answer is due to the fact that graph G and the particular edge U, V in question are both theta without any actual content to distinguish between.
+
+\\\\
+\end{enumerate}
+
+
+\end{document}
