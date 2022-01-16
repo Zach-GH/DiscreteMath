@@ -1,0 +1,199 @@
+\section*{Problem 1}
+\begin{enumerate}[label=(\alph*)]
+\item The domain for all variables in the expressions below is the set of real numbers. {\bf Determine whether each statement is true or false.}
+\begin{enumerate}[label=(\roman*)]
+  \item $\forall\, x\; \exists \,y\;(x\,+\,y\;\geq \;0)$
+\\\\
+  %Enter your answer below this comment line.
+  For all x there exists a y such that x+y\;\geq \;0 \\
+  x = 0 \\
+  True \ y = 0 = \ \geq 0 \\
+  x = 1 \\
+  y = 1 \geq 0
+\\\\
+  \item $\exists \, x\; \forall \,y\;(x\,\cdot\,y\;>\; 0)$
+   \\\\
+  %Enter your answer below this comment line.  
+  There exists an x for all y such that (x*y) \textgreater 0 \\
+  False \\
+  y = 0
+\\\\
+\end{enumerate}
+
+\item {\bf Translate each of the following English statements into logical expressions.}
+\begin{enumerate}[label=(\roman*)]
+  \item There are two numbers whose ratio is less than $1$.
+   \\\\
+  %Enter your answer below this comment line.  
+  \exists x, y: (x/y < 1, y/x < 1) \\
+
+\\\\
+  \item The reciprocal of every positive number is also positive.
+   \\\\
+  %Enter your answer below this comment line.  
+  \forall y: (y > 0 = 1/y > 0)
+\\\\
+  \end{enumerate}
+  \end{enumerate}
+  \newpage
+  \section*{Problem 2}
+  Prove the following using the specified technique:
+  \begin{enumerate}[label=(\alph*)]
+    \item Let $x$ and $y$ be two real numbers such that $x + y$ is rational. Prove by contrapositive that if $x$ is irrational, then $x - y$ is irrational.
+          \\\\
+  %Enter your answer below this comment line.  
+  If x is irrational, then x - y is irrational. \\
+  Assume that x is rational, so that x + y is rational. \\
+  If x + y is rational, that means that (x + y) - x = y would also be rational. \\
+  To show this, let x = 7, and y = 5. \\
+  (7 + 5) - 7 = 5. \\
+  Let us attempt this same equation with irrational numbers. \\
+  Let x = \sqrt{2} \ and \ y = \sqrt{99} \\
+  (\sqrt{2} + \sqrt{99}) - \sqrt{2} = \sqrt{99} \\
+  
+  Therefore we can logically say, if x is rational, then x + y is rational, which also means that if x is irrational, than x - y is irrational.
+  \\
+\\\\
+    \item Prove by contradiction that for any positive two real numbers, $x$ and $y$,
+         if $x\cdot y\, \leq \,50$, then either $x < 8$ or $y < 8$.
+          \\\\
+  %Enter your answer below this comment line.  
+  For any positive two real numbers, x and y, if x * y \leq 50 \ then \ either \ x \textless 8 \ or \ y \textless 8. \\
+  
+  To prove this, we will assume that x * y \textgreater \ 50. \\
+  
+  To test our first instance, x \textless \ 8 Let x = 1, and y = 50. \\
+  
+  1 * 50 = 50 which does not support our hypothesis making this our first contradiction. \\
+  
+  As we can do the same for Y, we can assume that Y also has the capability to contradict our original hypothesis. Meaning that the hypothesis is not true.\\
+  
+  To further show this, imagine x * y \leq 50. \\
+  
+  If both x and y together were \textless \ 50 then the equation would prove to be true as 7 * 7 = 49. \\
+  
+  But for all positive real numbers in addition to either x or y being \textless \ 8, we have access to numbers way beyond 50 such as 50 * 7 = 350. \\
+  
+  
+\\\\
+  \end{enumerate}
+  \newpage
+  \section*{Problem 3}
+  Let $n\, \geq \, 1$, $x$ be a real number, and $x\, \geq\,-1$. {\bf Prove the following statement using mathematical induction.}
+  \[(1\,+\,x)^n\;\geq\;1\,+\,nx\]
+\\\\
+  %Enter your answer below this comment line.  
+Proof Suppose 1 + x \textgreater 0 \\
+
+Base Case n = 1 \\
+(1+x)^1 = 1+x \ 1 +(1)x = 1+x \\
+
+Since 1+x = 1+x the inequality holds for n=1 \\
+
+Induction Hypothesis Suppose (1+x)^k \geq 1+kx \ for \ some \ k \in \Z \\
+
+Inductive Step (Notice (1+x)^k^+^1 = (1+x)(1+x)^k \\
+\geq (1+x)(1+kx) \\
+= 1+kx+x+kx^2 \geq 1+kx+x \\
+= 1+(k+1)x \\
+
+Therefore our claim follows induction
+
+
+\\\\
+\newpage
+  \section*{Problem 4}
+  {\bf Solve the following problems:}
+  \begin{enumerate}[label=(\alph*)]
+    \item How many ways can a store manager arrange a group of 1 team leader and 3 team workers from his 25 employees?
+\\\\
+  %Enter your answer below this comment line.  
+  Since it is not clear whether or not the team leader is separate or inclusive to the 25 employees, for this problem we will assume that any of the 25 employees can be chosen to be an acting team leader. To begin, there are 25 choices for the Team leader, after they are chosen, there are 24 choices for the team workers, but every time one is chosen, the pool of people that are able to be chosen decreases by 1. This means that we have an equation that looks like this. 25 * 24 * 23 * 22 = 303600. In conclusion this means out of the total 25 employees, there are 303600 ways that the store manager can arrange groups with one team leader and 3 team workers.
+\\\\
+    \item A state’s license plate has 7 characters. Each character can be a capital letter $(A-Z)$, or a non-zero digit $(1-9)$. How many license plates start with 3 capital letters and end with 4 digits with no letter or digit repeated?
+\\\\
+  %Enter your answer below this comment line.  
+  26 * 25 * 24 * 9 * 8 * 7 * 6 * 35 = 1651104000 choices. The reason this is the answer is due to the decreasing character pool to take from due to no repeated letters or numbers. In addition to this, because the first few characters can only be letters, and the last few, only numbers, we see the jump in multiples to express that in the equation. Lastly, they all draw from a pool of 35 characters, which gives us the last multiple at the end.
+\\\\
+    \item How many binary strings of length 5 have at least 2 adjacent bits that are the same (``$00$'' or ``$11$'') somewhere in the string?
+\\\\
+  %Enter your answer below this comment line.  
+  First we have to calculate all the different possibilities to choose from which is 2^5 \\
+  
+  We choose the number 5 due to the length of the binary string and 2 due to the subset of numbers we are looking for. \\
+  
+  Due to the nature of the question, we must ask what the differential is from the requested answer, which in this case is the opposite of binary that has adjacent bits, that can be expressed in two possible ways. 1010.. or 0101... \\
+  
+  This leaves us with the final formula we are able to compute in order to find the answer. (2^5) - 2 = 32 - 2 = 30. \\
+  
+  This means there are 30 instances in which there are examples of binary numbers that have two adjacent bits that are the same somewhere in the string.
+  
+\\\\
+  \end{enumerate}
+\newpage
+  \section*{Problem 5}
+  A class with n kids lines up for recess. The order in which the kids line up is random with each ordering being equally likely. There are two kids in the class named Betty and Mary. The use of the word ``$or$'' in the description of the events, should be interpreted as the inclusive or. That is ``$A \;or\; B$'' means that $A$ is true, $B$ is true, or both $A$ and $B$ are true.\\\\
+  What is the probability that Betty is first in line or Mary is last in line as a function of $n$? Simplify your final expression as much as possible and include an explanation of how you calculated this probability.
+\\\\
+  %Enter your answer below this comment line.  
+  The probability of this problem is continuous due to uniform distribution. We are dealing with a function of n where everything is equal and random. \\
+  
+  f(x) = ...Betty \leq x \leq Mary \\
+  
+  0 otherwise.\\
+  
+  Given that there are only two instances in which something can happen, due to only two of the elements in the problem being defined. If we were to calculate the percentage chance of Betty being first in line, or Mary being last, (out of a line of 2) then for each problem the duality present would be a 50\% chance in which one can be first, or the other last, or 0 which would be none at all. \\
+  
+  In addition to this, in the case we had decided to for whatever reason define N as any real number. (NOTE: Let us say N in this case is N=7) \\
+  
+  Then the probability would then be 1/7 for both instances. \\
+  
+  The reason this is is due to the fact that there is only one instance in which only Betty is first, and one instance in which only Mary is last. But in the case we had wanted to account for the OR A and B are true, then the probability would then increase to 3/7 Because there are 3 options that can equate our hypothesis to True. \\
+  
+  A is True = 1/7 = 0.14285\% \\
+  
+  B is True = 1/7 = 0.14285\% \\
+  
+  Both A and B are true = 1/7 = 0.14285\% \\
+  
+  Leaving us with a total truth probability of 3/7 to satisfy any of the conditions which = 0.42857\% \\
+  
+  
+\\\\
+  \newpage
+  \section*{Problem 6}
+The general manager, marketing director, and 3 other employees of Company $A$ are hosting a visit by the vice president and 2 other employees of Company $B$. The eight people line up in a random order to take a photo. Every way of lining up the people is equally likely.
+\begin{enumerate}[label=(\alph*)]
+  \item What is the probability that the general manager is next to the vice president?
+\\\\
+ 
+ The probability of the two people standing next to one another is computed starting with the permutation of 7. 7! which also is 5040 instances expresses that the two people are a singular pair, and treats them as if they are moving around together within the instances of the lineup. We then can take this number and put it into an equation in order to compute the percent chance of each lineup. \\
+ 
+ [(7!)*(2!)]/8! = 1/4 = 0.25\% chance that they are standing next to one another. \\
+
+  
+\\\\
+  \item What is the probability that the marketing director is in the leftmost position?
+\\\\
+  The probability that the marketing director is the leftmost person starts with us subtracting him from the beginning data set in question. If we were to take the director, and place him on the left side, then there are 7! more options to choose where each person can stand which is 5040. Knowing this, we then divide 7!/8! in order to get the percentage chance which is 1/8 or 0.125%
+  
+\\\\
+  \item Determine whether the two events are independent. Prove your answer by showing that one of the conditions for independence is either true or false.
+ \\\\
+  %Enter your answer below this comment line.
+  Two events are independent if conditioning on one event does not change the probability of the other. \\
+  
+  First we must define each events for functions. \\
+  
+  Let F = The marketing director standing on the left most side, 0.125\% \\
+  
+  Let E = the chance the GM and the VP are standing next to one another, or 0.25\% \\
+  
+  p(E \cap F) = 1/32 \\
+  
+  Therefore, these events are independent. with a percentage rate of 0.03125\% of happening. \\
+  
+\\\\
+\end{enumerate}
+\end{document}
+
