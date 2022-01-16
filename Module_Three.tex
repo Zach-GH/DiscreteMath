@@ -1,0 +1,177 @@
+\section*{Problem 1}
+
+A 125-page document is being printed by five printers. Each page will be printed exactly once.
+ \begin{enumerate}[label=(\alph*)]
+ \item  Suppose that there are no restrictions on how many pages a printer can print. How many ways are there for the 125 pages to be assigned to the five printers?\\\\
+{\it One possible combination: printer A prints out pages 2-50, printer B prints out pages 1 and 51-60, printer C prints out 61-80 and 86-90, printer D prints out pages 81-85 and 91-100, and printer E prints out pages 101-125.}\\\\
+%Enter your answer below this comment line.
+Because 125 divided by 5 is 25 and the output is even. Given that at least one page is being printed by each printer, and there are no printers not being utilized that there will always be some combination of 5 groups with 5 options. In other words, if you were to think of each printer as a bin, and each group of pages (no matter the number in each group) as colored balls, that could go into any one of the 5 bins. The answer to this problem would be \[5^5 = 3125\] options. The reason this is true, is due to the validity of choice that each grouping of pages would have, if you were to break the pages into 5 categories of 25 pages, the first category, or a blue ball in this instance, would have the choice to be put into either the first, second, third, fourth, or fifth bin that all have varying colors as well. This means that each category will always have five choices to be put into in addition to having no pages left over.
+        \\\\
+ \item Suppose the first and the last page of the document must be printed in color, and only two printers are able to print in color. The two color printers can also print black and white. How many ways are there for the 125 pages to be assigned to the five printers?\\\\
+%Enter your answer below this comment line.
+Given that the first and last pages of the document have to be printed in color, this means that we can segment those two pages into two separate groups away from the rest of the document. This means that instead of choosing where 125 different pages are being printed, we subtract the two pages to make the total of pages 123. 123 is divisible by 3 and gives us at most groupings of 41 pages each. This means that there are 3 batches to be printed, with 5 choices of printers to print from, meaning that we have \[3^5 = 243\] options.
+        \\\\
+ \item Suppose that all the pages are black and white, but each group of 25 consecutive pages (1-25, 26-50, 51-75, 76-100, 101-125) must be assigned to the same printer. Each printer can be assigned 0, 25, 50, 75, 100, or 125 pages to print.
+
+How many ways are there for the 125 pages to be assigned to the five printers?\\\\
+%Enter your answer below this comment line.
+The way I am interpreting this question the way it is written, is that each group of pages will only be printed on one printer. The way it is written makes me think that although each printer has the capability to print all variations of each category, that only one will be utilized. This would mean that there is only one way to print the document and that the answer is 5. The reason that the answer is 5, is that although there are a multitude of ways to print between each printer, if all are assigned to one, then in the beginning there are 5 choices of which printer to use.
+        \\\\
+   \end{enumerate}
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 2}
+Ten kids line up for recess. The names of the kids are:\\
+\begin{center}
+ \{Alex, Bobby, Cathy, Dave, Emy, Frank, George, Homa, Ian, Jim\}.\\
+\end{center}
+Let $S$ be the set of all possible ways to line up the kids. For example, one order might be:
+\begin{center}
+  (Frank, George, Homa, Jim, Alex, Dave, Cathy, Emy, Ian, Bobby)\\
+\end{center}
+
+The names are listed in order from left to right, so Frank is at the front of the line and Bobby is at the end of the line.\\
+
+Let $T$ be the set of all possible ways to line up the kids in which George is ahead of Dave in the line. Note that George does not have to be immediately ahead of Dave. For example, the ordering shown above is an element in $T$.\\
+
+Now define a function $f$ whose domain is $S$ and whose target is $T$. Let $x$ be an element of $S$, so $x$ is one possible way to order the kids. If George is ahead of Dave in the ordering $x$, then $f(x) = x$. If Dave is ahead of George in $x$, then $f(x)$ is the ordering that is the same as $x$, except that Dave and George have swapped places.\\
+\begin{enumerate}[label=(\alph*)]
+  \item What is the output of $f$ on the following input?\\
+  (Frank, George, Homa, Jim, Alex, Dave, Cathy, Emy, Ian, Bobby)\\\\
+%Enter your answer below this comment line.
+Because George is ahead of Dave in line, this means that $f$(x)=x
+\\\\
+  \item What is the output of $f$ on the following input?\\
+(Emy, Ian, Dave, Homa, Jim, Alex, Bobby, Frank, George, Cathy)\\\\
+%Enter your answer below this comment line.
+Because Dave is in front of George in line, that means that the answer is the same except for Dave and George swapping places which would be. (Emy, Ian, George, Homa, Jim, Alex, Bobby, Frank, Dave, Cathy)
+\\\\\
+  \item Is the function $f$ a $k$-to-1 correspondence for some positive integer $k$? If so, for what value of $k$? Justify your answer.\\\\
+%Enter your answer below this comment line.
+Yes this function is a K to 1 correspondence for some positive integer. The reason I believe this to be so, is the fact that in the explanation of the problem they are already setting up the inverse of the problem to the output of the original function. For example, if x is an element of S, and George is ahead of Dave, the ordering is then f(x) = x. The reason it is a k to 1 function is due to the fact that if Dave is instead in front of George, you get the same output for the problem, but can map from the inverse of the function to the function itself by swapping the positioning of kids, and letting everything else remain the same so f(x) = x. I think that this would mean that it is a 2 to 1 function due to the fact that K, in the case that it is the order of George and Dave are in a specific instance, that means that we can say that there are 8 other people in a specific lineup. 
+\\\\
+  \item There are 3628800 ways to line up the 10 kids with no restrictions on who comes before whom. That is, $|S| =3628800$. Use this fact and the answer to the previous question to determine $|T|$.\\\\
+%Enter your answer below this comment line.
+The answer to my last question, being that this scenario is showing that there is a 2 to 1 correspondence means that the mathematical formula would look like this. $|T|$=$|S|$/K. or $|T|$=3628800/2 which equals 1814400 meaning that $|T|$=181440. To justify this answer, if we were to think of the defined function, and the inverse of that function it makes a lot of sense. The reason is because in the case that Dave is ahead of George, if we were to switch the two to get George is ahead of Dave, then we are showing the cardinal truth of both sets which means that for the total itself without any order, that we will be able to divide by two to show each side equally for each respective cardinal truth.
+\\\\
+\end{enumerate}
+
+   
+   \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 3}
+   
+   
+\item Consider the following definitions for sets of characters:
+\begin{itemize}
+  \item Digits $\;=\; \{ 0,\, 1,\, 2,\, 3,\, 4,\, 5,\, 6,\, 7,\, 8,\, 9 \}$\\
+  \item Letters$\; = \;\{ a,\, b,\, c, \,d,\, e,\, f,\, g,\, h,\, i,\, j,\, k,\, l,\, m,\, n,\, o,\, p,\, q,\, r,\, s,\, t,\, u,\, v,\, w,\, x,\, y,\, z \}$\\
+  \item Special characters $\;=\; \{ *,\, \&,\, \$,\, \# \}$\\
+\end{itemize}
+
+Compute the number of passwords that satisfy the given constraints.
+    \begin{enumerate}[label=(\roman*)]
+    \item Strings of length 7. Characters can be special characters, digits, or letters, with no repeated characters.\\\\
+%Enter your answer below this comment line.
+We can find the answer using the generalized product rule. In order to compute the problem, we have to understand what the variables we are working with are. In this case, it is a string with the length of 7, where no repeated characters are allowed, from a pool of 38 total characters to choose from. This means that if we were to individualize each space out of the characters that could be chosen in the 7 open string spaces from the pool of 38, we would be able to choose 38 the first time, 37 the second time, and so on. Which means the answer to this problem is 38 * 37 * 36 * 35 * 34 * 33 * 32 = 636060900240 number of passwords that would satisfy the given constraints.
+\\\\
+    \item Strings of length 6. Characters can be special characters, digits, or letters, with no repeated characters. The first character can not be a special character.\\\\
+%Enter your answer below this comment line.
+Again using the generalized product rule, we can compute this problem, but first by subtracting the special characters for the instance of the first character due to the lack of ability to choose special characters. Meaning that this problem would instead look like 34 * 37 * 36 * 35 * 34 * 33 = 1778459760. The reason that the first multiple is 34 and not 38 again is because we are taking from a reduced set of available characters, but the second is 37 because the amount of characters is able to be what it would have been if special characters were allowed, but due to the lack of ability to repeat numbers, it is negative one as one of the other variables available has already been chosen and used.
+      \end{enumerate}
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 4}
+A group of four friends goes to a restaurant for dinner. The restaurant offers 12 different main dishes.\\
+    \begin{enumerate}[label=(\roman*)]
+    \item Suppose that the group collectively orders four different dishes to share. The waiter just needs to place all four dishes in the center of the table. How many different possible orders are there for the group?\\\\
+%Enter your answer below this comment line.
+If the group collectively orders four different dishes to share this would mean that P(12,4) would be the amount of different possible orders for the group. In total this equates to 11880.
+    \item Suppose that each individual orders a main course. The waiter must remember who ordered which dish as part of the order. It's possible for more than one person to order the same dish. How many different possible orders are there for the group?\\\\
+%Enter your answer below this comment line.
+In the case that each of the friends ordered an individual dish, and it did not matter if they ordered the same thing, that would mean that the answer would be 12 * 12 * 12 * 12 = P(12,4). The reason it would be this is due to the fact that no amount of the total dishes available to choose is affected by anyone or anybody else which is the reason why it is not a factorial multiplication. The amount of options available for this would equate to P = 20736.
+\\\\
+
+    \end{enumerate}
+
+
+How many different passwords are there that contain only digits and lower-case letters and satisfy the given restrictions?\\
+      \begin{enumerate}[label=(\roman*), start=3]
+    \item Length is 7 and the password must contain at least one digit.\\\\
+%Enter your answer below this comment line.
+The answer to this problem would be P = 15448044160 possible passwords. The way I got this answer was by computing first the numbers allowed to assure that there would be at least one number. After that, because it is not specified that you cannot use repeats in the password, the total amount of available characters does not decrease making the problem look like this. 10*34*34*34*34*34*34=P(34,7) The reason for P(34,7) is due to the total amount of characters that can be chosen, from the available numbers added with the available characters, in addition to the amount of numbers being chosen which dictates the amount of multiples as well.
+\\\\
+     \item Length is 7 and the password must contain at least one digit and at least one letter.\\\\
+%Enter your answer below this comment line.
+For this answer, I computed it in the same way as the one above, though for this instance instead of having 6 multiples of 34, I had 5 multiples of 34, a multiple of 10 to account for the allotted numbers available, and 24 for the amount of letters. Meaning that it would be 10*24*34*34*34*34*34=P(34,7) P=10904501760
+\\\\
+    \end{enumerate}
+ 
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 5}
+
+A university offers a Calculus class, a Sociology class, and a Spanish class. You are given data below about two groups of students.\\\\
+     \begin{enumerate}[label=(\roman*)]
+     \item Group 1 contains 170 students, all of whom have taken at least one of the three courses listed above. Of these, 61 students have taken Calculus, 78 have taken Sociology, and 72 have taken Spanish. 15 have taken both Calculus and Sociology, 20 have taken both Calculus and Spanish, and 13 have taken both Sociology and Spanish. How many students have taken all three classes?\\\\
+%Enter your answer below this comment line.
+7 students have taken all three classes. The way I found this answer was by adding all of the variables together of students attending each class. I took the sum of that equation, and subtracted the amount of students that had taken two classes. This left me with 163 students, and knowing already that there are 170 students enrolled total, that means that there are exactly 7 students enrolled in all 3 classes. To show my math, if M = Calculus L = Sociology and P = Spanish then this would be the equation. M + L + P - M \cap L - M \cap P - L \cap P = 163 + 7 = 170
+\\\\\
+   
+\item You are given the following data about Group 2. 32 students have taken Calculus, 22 have taken Sociology, and 16 have taken Spanish. 10 have taken both Calculus and Sociology, 8 have taken both Calculus and Spanish, and 11 have taken both Sociology and Spanish. 5 students have taken all three courses while 15 students have taken none of the courses. How many students are in Group 2?\\\\
+%Enter your answer below this comment line.
+The answer to this problem is 61. Much like the last problem, we add up all of the variables, subtract the variables that express the instances in which students took both classes, and add the variable in which students take all 3 classes in order to get the total amount of students. The only difference is that this time, there is an unaccounted for variable introduced later in the problem. So we have to add 15 to account for students that have not taken any of the classes to get the total amount of students in the data set. The reason this is, is because the data set we start out with assumes that all of the students involved are all participating in the classes, so it is easier to manipulate that number and not have to account for students that may not be included in some way with any of the classes.
+\\\\\
+         \end{enumerate}
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 6}
+A coin is flipped five times. For each of the events described below, express the event as a set in roster notation. Each outcome is written as a string of length 5 from $\{H,\, T\}$, such as $HHHTH$. Assuming the coin is a fair coin, give the probability of each event.\\
+\begin{enumerate}[label=(\alph*)]
+\item The first and last flips come up heads.\\\\\
+%Enter your answer below this comment line.
+Before we start computing the problem it is important to note the amount of possibilities for the given problem. This is $2^{5}$ due to the fact that there are two outcomes for either side of the coin, in addition to the 5 consecutive flips in a row that make up an event in the sample space. The probability of the first event is 8/32 as there are 8 events in which the first and last flip come up as heads, meaning that there is a 1/4 chance for this to happen or 25\%.
+\\\\\
+\item There are at least two consecutive flips that come up heads.\\\\\
+%Enter your answer below this comment line.
+In this instance, there are 16/32 possibilities, which equates to 2/4 which reduces to 1/2. In other words, there is a 50\% chance that your flips in this area will come up with two consecutive flips that are heads.
+\\\\\
+\item The first flip comes up tails and there are at least two consecutive flips that come up heads.\\\\\
+%Enter your answer below this comment line.
+Lastly, there are 8 events in this instance in which the first flip comes up tails, and there are also two consecutive flips, which are heads. 8/32 = 1/4 which is also 25\%.
+\\\\\
+\end{enumerate}
+
+ \newpage
+%--------------------------------------------------------------------------------------------------
+
+\section*{Problem 7}
+An editor has a stack of $k$ documents to review.  The order in which the documents are reviewed is random with each ordering being equally likely. Of the $k$ documents to review, two are named ``Relaxation Through Mathematics'' and ``The Joy of Calculus.'' Give an expression for each of the probabilities below as a function of k. Simplify your final expression as much as possible so that your answer does not include any expressions in the form\\
+$
+\Big(
+ \begin{array}{c}
+ a\\
+ b
+    \end{array}
+    \Big)
+$.
+ \begin{enumerate}[label=(\alph*)]
+\item What is the probability that ``Relaxation Through Mathematics'' is first to review?\\\\
+%Enter your answer below this comment line.
+The probability of this instance is continuous due to the uniform distribution. Because we are dealing with a function of k books in which everything is equal and at random. \\ $f$(x) = ...Relaxation Through Mathematics $\leq$ x $\leq$ The Joy of Calculus \\
+0, otherwise
+Given that currently there have only been two books mentioned out of the sum of possibilities, that would mean that again, not only is the probability continuous until the interval of books is specified, but for the current interval of specified books being 2, then choosing one book over the other would be 1/k giving us a 50\% chance to choose one book over the other, and a \% chance of 0 otherwise until we are able to increase the data set.
+\\\\
+\item What is the probability that ``Relaxation Through Mathematics'' and ``The Joy of Calculus'' are next to each other in the stack?\\\\
+%Enter your answer below this comment line.
+The probability would be 100\% that they are next to each other given that any of the other variables are undefined. This means that anything other than k/1 cannot be referenced as anything other than continuous or 0.
+\\\\
+\end{enumerate}
+
+
+\end{document}
