@@ -1,2 +1,2 @@
 # DiscreteMath
-My projects from MAT230 using Latex
+My homework and projects from MAT230 using Latex
